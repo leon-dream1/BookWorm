@@ -23,6 +23,15 @@ const BookDetails = () => {
 
   return (
     <div className="container mx-auto my-[50px]">
+      {!selectedBook && (
+        <div className="flex flex-row w-full justify-center items-center">
+          <span className="loading loading-bars loading-xs"></span>
+          <span className="loading loading-bars loading-sm"></span>
+          <span className="loading loading-bars loading-md"></span>
+          <span className="loading loading-bars loading-lg"></span>
+        </div>
+      )}
+
       <div className="grid grid-cols-2 gap-8 items-center">
         <div className="bg-[#1313130D] rounded-2xl h-[650px] flex items-center justify-center object-cover p-[70px]">
           <img src={image} alt={bookName} className="w-[60%] h-[80%]" />
@@ -93,13 +102,15 @@ const BookDetails = () => {
           </div>
           <div className="space-x-6">
             <button
-            onClick={() => saveReadBooks(bookId)}
-             className="border border-[#1313134D] px-[20px] py-[15px] text-[#131313] text-[18px] font-semibold rounded-lg">
+              onClick={() => saveReadBooks(bookId)}
+              className="border border-[#1313134D] px-[20px] py-[15px] text-[#131313] text-[18px] font-semibold rounded-lg"
+            >
               Read
             </button>
             <button
-            onClick={() => saveWishListBooks(bookId)}
-            className="border border-[#1313134D] px-[20px] py-[15px] text-white text-[18px] font-semibold bg-[#50B1C9] rounded-lg">
+              onClick={() => saveWishListBooks(bookId)}
+              className="border border-[#1313134D] px-[20px] py-[15px] text-white text-[18px] font-semibold bg-[#50B1C9] rounded-lg"
+            >
               Wishlist
             </button>
           </div>
