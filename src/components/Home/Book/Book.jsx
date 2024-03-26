@@ -1,11 +1,17 @@
 import PropTypes from "prop-types";
 
 import { CiStar } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 
 const Book = ({ book }) => {
-  const { image, bookName, author, tags, category, rating } = book;
+  const { image, bookName, author, tags, category, rating, bookId } = book;
+
+  const navigate = useNavigate();
   return (
-    <div className="card w-96 border border-[#13131326] rounded-2xl p-6 cursor-pointer">
+    <div
+      onClick={() => navigate(`book/${bookId}`)}
+      className="card w[30%] border border-[#13131326] rounded-2xl p-6 cursor-pointer"
+    >
       <figure className="bg-[#F3F3F3] rounded-[16px] h-[50%]">
         <img src={image} alt={bookName} className="w-[70%] h-[70%] mx-auto" />
       </figure>
@@ -27,7 +33,7 @@ const Book = ({ book }) => {
           By: {author}
         </p>
       </div>
-      <div className="pt-5 flex justify-between">
+      <div className="pt-10 flex justify-between">
         <span className="text-[#131313CC] text-[16px] font-medium font-work-sans ">
           {category}
         </span>
