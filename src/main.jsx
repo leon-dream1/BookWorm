@@ -9,11 +9,13 @@ import BookDetails from "./components/BookDetails/BookDetails.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ListedBooks from "./components/ListedBooks/ListedBooks.jsx";
+import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainElement />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -27,6 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/listedBooks",
         element: <ListedBooks />,
+        loader: () => fetch("/booksData.json"),
       },
     ],
   },

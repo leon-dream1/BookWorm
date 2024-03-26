@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -26,28 +26,41 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#23BE0A] font-semibold border border-[#23BE0A] rounded-lg font-work-sans text-[18px] px-5 py-[14px]"
+                    : "text-[#131313CC] text-[18px] font-normal font-work-sans px-5 py-[14px]"
+                }
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to={"/listedBooks"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#23BE0A] font-semibold border border-[#23BE0A] rounded-lg font-work-sans text-[18px] px-5 py-[14px]"
+                    : "text-[#131313CC] text-[18px] font-normal font-work-sans px-5 py-[14px]"
+                }
+              >
+                Listed Books
+              </NavLink>
+              <NavLink
+                to={"/pagesToRead"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#23BE0A] font-semibold border border-[#23BE0A] rounded-lg font-work-sans text-[18px] px-5 py-[14px]"
+                    : "text-[#131313CC] text-[18px] font-normal font-work-sans px-5 py-[14px]"
+                }
+              >
+                Pages to Read
+              </NavLink>
             </ul>
           </div>
-          <a className="text-[#131313] text-[28px] font-bold font-work-sans">
+          <Link to={'/'} className="text-[#131313] text-[28px] font-bold font-work-sans">
             Book<span className="text-[#f75454] font-playfair">W</span>orm
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal space-x-8">
