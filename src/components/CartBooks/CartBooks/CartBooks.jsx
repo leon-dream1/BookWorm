@@ -17,9 +17,9 @@ const CartBooks = () => {
     setCartBooks(matchingBooks);
   }, [cartBookId]);
 
-  console.log("cart", cartBooks);
   return (
     <div>
+        {cartBooks.length < 1 && <p className="text-center text-xl font-bold font-playfair mt-[100px]">No data Found....</p>}
       {cartBooks.map((book) => (
         <CartBook key={book.bookId} book={book} />
       ))}
