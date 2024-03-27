@@ -8,7 +8,6 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  ResponsiveContainer,
   Tooltip,
 } from "recharts";
 
@@ -26,6 +25,7 @@ const getPath = (x, y, width, height) => {
 };
 
 const TriangleBar = (props) => {
+  // eslint-disable-next-line react/prop-types
   const { fill, x, y, width, height } = props;
 
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
