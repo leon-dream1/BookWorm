@@ -1,5 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveReadBooks, saveWishListBooks } from "../../utility/storage";
+import { saveCartBooks, saveReadBooks, saveWishListBooks } from "../../utility/storage";
 
 const BookDetails = () => {
   const booksData = useLoaderData();
@@ -112,6 +112,12 @@ const BookDetails = () => {
               className="border border-[#1313134D] px-[20px] py-[15px] text-white text-[18px] font-semibold bg-[#50B1C9] rounded-lg"
             >
               Wishlist
+            </button>
+            <button
+            onClick={() => saveCartBooks(bookId)}
+              className="border border-[#1313134D] px-[20px] py-[15px] text-white text-[18px] font-semibold bg-[#50c97a] rounded-lg"
+            >
+              Add to Cart
             </button>
           </div>
         </div>

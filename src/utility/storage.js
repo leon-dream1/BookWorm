@@ -51,3 +51,38 @@ export const saveWishListBooks = (bookID) => {
     }
   }
 };
+
+
+
+export const getCartBooks = () => {
+  const cartBooks = localStorage.getItem("cart-books");
+
+  if (cartBooks) {
+    return JSON.parse(cartBooks);
+  }
+  return [];
+};
+
+export const saveCartBooks = (bookID) => {
+  const storedCartBooks = getCartBooks();
+
+  const isExist = storedCartBooks.includes(bookID);
+  if (isExist) {
+    toast.error("The Book is Already in the Cart!!!!!!");
+  } else {
+    storedCartBooks.push(bookID);
+    localStorage.setItem("cart-books", JSON.stringify(storedCartBooks));
+    toast.success("Congratulation!!! Book is added to the Cart........");
+  }
+};
+
+export const removeCartBooks = (bookID) => {
+  console.log(bookID);
+  const storedCartBooks = getCartBooks();
+  console.log("pre", storedCartBooks);
+
+ const remainingBooks =  storedCartBooks.filter(bookId => parseInt(bookId) !== bookID);
+ localStorage.setItem("cart-books", JSON.stringify(remainingBooks));
+
+
+};
