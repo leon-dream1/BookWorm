@@ -3,6 +3,16 @@
 
 
 
+# Features
+- minimum 6 books Information
+- Book details page for specific book.
+- Sorting functionality based on Pages, rating and publishing year.
+- Bar chart where chart are shown on  book's name against read-listed
+books totalPages.
+
+
+
+
 
 # React + Vite
 
