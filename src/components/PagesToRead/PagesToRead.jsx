@@ -10,6 +10,7 @@ import {
   CartesianGrid,
   Tooltip,
 } from "recharts";
+import { useEffect, useState } from "react";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
@@ -35,43 +36,47 @@ const PagesToRead = () => {
   const booksData = useLoaderData();
 
   const readBookId = getReadBooks();
-  const readBooks = []; // all data is here
-  for (const bookID of readBookId) {
-    const matchingReadBooks = booksData.find(
-      (book) => book.bookId === parseInt(bookID)
+
+  const [readBooks, setReadBooks] = useState([]);
+
+  useEffect(() => {
+    const matchingReadBooks = booksData.filter((book) =>
+      readBookId.includes(book.bookId.toString())
     );
-    readBooks.push(matchingReadBooks);
-  }
+    setReadBooks(matchingReadBooks);
+  }, [readBookId]);
+
   return (
     <div className="container mx-auto mt-[40px]">
-      <div className="w-[100%] mx-auto bg-[#13131308] rounded-3xl p-[30px]">
-        <BarChart
-        style={{width: '1500px'}}
-          width={1500}
-          height={400}
-          data={readBooks}
-          margin={{
-            top: 20,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="bookName" />
-          <YAxis />
-          <Tooltip />
-          <Bar
-            dataKey="totalPages"
-            fill="#8884d8"
-            shape={<TriangleBar />}
-            label={{ position: "top" }}
+      <div className="bg-[#13131308] rounded-3xl p-[30px]">
+        <div className="grid grid-cols-1">
+          <BarChart
+            width={1500}
+            height={400}
+            data={readBooks}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
           >
-            {readBooks.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-            ))}
-          </Bar>
-        </BarChart>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="bookName" />
+            <YAxis />
+            <Tooltip />
+            <Bar
+              dataKey="totalPages"
+              fill="#8884d8"
+              shape={<TriangleBar />}
+              label={{ position: "top" }}
+            >
+              {readBooks.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+              ))}
+            </Bar>
+          </BarChart>
+        </div>
       </div>
     </div>
   );

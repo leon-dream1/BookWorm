@@ -66,6 +66,16 @@ const Navbar = () => {
               >
                 Cart
               </NavLink>
+              <NavLink
+                to={"/blog"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#23BE0A] font-semibold border border-[#23BE0A] rounded-lg font-work-sans text-[18px] px-5 py-[14px]"
+                    : "text-[#131313CC] text-[18px] font-normal font-work-sans px-5 py-[14px]"
+                }
+              >
+                Blog
+              </NavLink>
             </ul>
           </div>
           <Link
@@ -116,6 +126,16 @@ const Navbar = () => {
               }
             >
               Cart
+            </NavLink>
+            <NavLink
+              to={"/blog"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#23BE0A] font-semibold border border-[#23BE0A] rounded-lg font-work-sans text-[18px] px-5 py-[14px]"
+                  : "text-[#131313CC] text-[18px] font-normal font-work-sans px-5 py-[14px]"
+              }
+            >
+              Blog
             </NavLink>
           </ul>
         </div>

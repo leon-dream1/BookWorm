@@ -12,6 +12,7 @@ import ListedBooks from "./components/ListedBooks/ListedBooks.jsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 import PagesToRead from "./components/PagesToRead/PagesToRead.jsx";
 import CartBooks from "./components/CartBooks/CartBooks/CartBooks.jsx";
+import Blogs from "./components/Blogs/Blogs.jsx";
 
 export const cartContext = createContext();
 
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
         path: "/cart",
         element: <CartBooks />,
         loader: () => fetch("/booksData.json"),
+      },
+      {
+        path: "/blog",
+        element: <Blogs />,
+        loader: () => fetch("/blogData.json"),
       },
     ],
   },
