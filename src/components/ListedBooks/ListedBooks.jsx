@@ -107,7 +107,7 @@ const ListedBooks = () => {
 
       <div className="text-center">
         <details className="dropdown  mt-[20px]">
-          <summary className="m-1 btn">
+          <summary className="m-1 btn bg-[#23BE0A]">
             Sort By <IoIosArrowDown />
           </summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">

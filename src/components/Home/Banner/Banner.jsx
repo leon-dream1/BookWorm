@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import banner from "../../../images/banner.png";
 
 const Banner = () => {
+  const navigate = useNavigate();
   return (
     <div className="container mx-auto mt-[50px]">
       <div className="hero bg-base-200 rounded-3xl h-[600px] text-center lg:text-start">
@@ -11,7 +13,10 @@ const Banner = () => {
               Breathe New Energy into Your Reading List with These Unmissable
               Books
             </h1>
-            <button className="mt-[50px] bg-[#23BE0A] rounded-lg py-[10px] px-[15px] lg:px-[28px] text-[18px] text-white font-semibold font-work-sans cursor-pointer">
+            <button
+              onClick={() => navigate("/listedBooks")}
+              className="mt-[50px] bg-[#23BE0A] rounded-lg py-[10px] px-[15px] lg:px-[28px] text-[18px] text-white font-semibold font-work-sans cursor-pointer"
+            >
               View The List
             </button>
           </div>

@@ -52,7 +52,7 @@ const PagesToRead = () => {
         <div className="grid grid-cols-1">
           <BarChart
             width={1500}
-            height={400}
+            height={500}
             data={readBooks}
             margin={{
               top: 20,

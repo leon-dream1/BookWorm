@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Top 10 Books Every Bookworm Should Read in 2024",
+    "image": "https://i.ibb.co/m8LstTd/1.jpg",
     "author": "Emily Thompson",
     "date": "2024-03-28",
     "content": "As avid readers eagerly anticipate the literary treasures of the year, we've compiled a list of the top 10 must-read books that promise to captivate minds and hearts. From gripping mysteries to thought-provoking non-fiction, this curated selection ensures there's something for every reader. Whether you're seeking escapism or enlightenment, these books are bound to leave a lasting impression."
@@ -9,6 +10,7 @@
   {
     "id": 2,
     "title": "Discovering Hidden Gems: Independent Bookstore Finds",
+    "image": "https://i.ibb.co/3BgnNWR/2.jpg",
     "author": "Alex Rodriguez",
     "date": "2024-03-25",
     "content": "While bestsellers often steal the spotlight, there's a world of literary treasures waiting to be discovered in the cozy corners of independent bookstores. Join us on a journey as we explore the hidden gems found in these charming establishments. From enchanting debut novels to timeless classics waiting to be rediscovered, independent bookstores offer a unique and enriching browsing experience that celebrates the diversity of literature."
@@ -16,6 +18,7 @@
   {
     "id": 3,
     "title": "The Magic of Book Clubs: Building Communities Through Literature",
+    "image": "https://i.ibb.co/QdhG6hV/3jpg.jpg",
     "author": "Sophia Patel",
     "date": "2024-03-20",
     "content": "Book clubs have long served as vibrant hubs where readers come together to share their passion for literature and engage in lively discussions. In an age where digital distractions abound, the enduring appeal of book clubs lies in their ability to foster meaningful connections and cultivate a deeper appreciation for books. Join us as we delve into the magic of book clubs and discover the transformative power of communal reading experiences."
@@ -23,6 +26,7 @@
   {
     "id": 4,
     "title": "The Rise of Diverse Voices in Literature",
+    "image": "https://i.ibb.co/fGykZxK/4.jpg",
     "author": "Maria Nguyen",
     "date": "2024-03-15",
     "content": "In recent years, there has been a notable shift towards amplifying diverse voices in literature. From authors of marginalized communities to narratives that explore a wide spectrum of experiences, this movement has enriched the literary landscape and broadened readers' perspectives. Join us as we celebrate the rise of diverse voices in literature and explore the transformative power of inclusive storytelling."
@@ -30,6 +34,7 @@
   {
     "id": 5,
     "title": "Navigating the World of Self-Publishing: Tips for Aspiring Authors",
+    "image": "https://i.ibb.co/kq6q1bR/5.jpg",
     "author": "David Thompson",
     "date": "2024-03-10",
     "content": "With the rise of self-publishing platforms, aspiring authors now have more opportunities than ever to share their stories with the world. However, navigating the world of self-publishing can be daunting. In this blog post, we offer valuable tips and insights to help aspiring authors navigate the self-publishing journey with confidence. From manuscript preparation to marketing strategies, discover the tools and resources you need to turn your literary dreams into reality."
@@ -37,6 +42,7 @@
   {
     "id": 6,
     "title": "Exploring Literary Destinations: Bookstore Tours Around the World",
+    "image": "https://i.ibb.co/T4jySWQ/6.jpg",
     "author": "Sophie Williams",
     "date": "2024-03-05",
     "content": "For book lovers with a sense of wanderlust, exploring literary destinations offers a unique opportunity to immerse oneself in the world of books and authors. From historic bookshops nestled in cobblestone streets to modern literary hubs bustling with creativity, bookstore tours around the world promise unforgettable experiences for bibliophiles. Join us as we embark on a virtual journey to discover some of the most enchanting bookstores across the globe."

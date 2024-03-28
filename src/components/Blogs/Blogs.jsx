@@ -12,13 +12,12 @@ const Blogs = () => {
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
         <a
           rel="noopener noreferrer"
-          href="#"
-          className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-gray-900"
+          className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-gray-900 rounded"
         >
           <img
-            src="https://source.unsplash.com/random/480x360"
+            src={blogData[0].image}
             alt=""
-            className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 bg-gray-500"
+            className="object-cover w-full h-[50%] rounded sm:h-96 lg:col-span-7 bg-gray-500"
           />
           <div className="p-6 space-y-2 lg:col-span-5">
             <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
@@ -32,13 +31,12 @@ const Blogs = () => {
           {blogs.slice(1).map((blog) => (
             <a
               key={blog.id}
-              href="#"
               className="max-w-sm mx-auto group hover:no-underline focus:no-underline text-black border border-[#13131326]"
             >
               <img
                 role="presentation"
-                className="object-cover w-full rounded h-44 bg-gray-500"
-                src="https://source.unsplash.com/random/480x360?1"
+                className="object-cover w-full rounded h-[30%] bg-gray-500"
+                src={blog.image}
               />
               <div className="p-6 space-y-2">
                 <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">

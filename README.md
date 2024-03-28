@@ -1,7 +1,7 @@
 # BookWorm | Read Your Favorite Books
 
 
-
+[Website Live Link](https://bookworm-readbook.netlify.app/)
 
 # Features
 - minimum 6 books Information
@@ -9,6 +9,8 @@
 - Sorting functionality based on Pages, rating and publishing year.
 - Bar chart where chart are shown on  book's name against read-listed
 books totalPages.
+- Add to cart functionality.
+- Blog page for blog.
 
 
 
