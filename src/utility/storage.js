@@ -52,8 +52,6 @@ export const saveWishListBooks = (bookID) => {
   }
 };
 
-
-
 export const getCartBooks = () => {
   const cartBooks = localStorage.getItem("cart-books");
 

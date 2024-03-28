@@ -48,8 +48,73 @@ const PagesToRead = () => {
 
   return (
     <div className="container mx-auto mt-[40px]">
-      <div className="bg-[#13131308] rounded-3xl p-[30px]">
-        <div className="grid grid-cols-1">
+      <div className="bg-[#13131308] rounded-3xl p-[10px] lg:p-[30px]">
+        <div className="flex md:hidden">
+          <BarChart
+            width={500}
+            height={400}
+            data={readBooks.length > 4 ? readBooks.slice(0, 4) : readBooks}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis
+              dataKey="bookName"
+              angle={-19}
+              height={50}
+              className="text-[14px]"
+            />
+            <YAxis />
+            <Tooltip />
+            <Bar
+              dataKey="totalPages"
+              fill="#8884d8"
+              shape={<TriangleBar />}
+              label={{ position: "top" }}
+            >
+              {readBooks.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+              ))}
+            </Bar>
+          </BarChart>
+        </div>
+        <div className="hidden md:flex">
+          <BarChart
+            width={1500}
+            height={500}
+            data={readBooks}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis
+              dataKey="bookName"
+              angle={readBooks.length > 9 ? -19 : 0}
+              className="text-[14px]"
+            />
+            <YAxis />
+            <Tooltip />
+            <Bar
+              dataKey="totalPages"
+              fill="#8884d8"
+              shape={<TriangleBar />}
+              label={{ position: "top" }}
+            >
+              {readBooks.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+              ))}
+            </Bar>
+          </BarChart>
+        </div>
+        {/* <div className="grid grid-cols-1">
           <BarChart
             width={1500}
             height={500}
@@ -76,7 +141,7 @@ const PagesToRead = () => {
               ))}
             </Bar>
           </BarChart>
-        </div>
+        </div> */}
       </div>
     </div>
   );
