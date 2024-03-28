@@ -1,7 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-
   return (
     <div className="container mx-auto">
       <div className="navbar bg-base-100">
@@ -57,6 +56,16 @@ const Navbar = () => {
               >
                 Pages to Read
               </NavLink>
+              <NavLink
+                to={"/cart"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#23BE0A] font-semibold border border-[#23BE0A] rounded-lg font-work-sans text-[18px] px-5 py-[14px]"
+                    : "text-[#131313CC] text-[18px] font-normal font-work-sans px-5 py-[14px]"
+                }
+              >
+                Cart
+              </NavLink>
             </ul>
           </div>
           <Link
@@ -110,7 +119,7 @@ const Navbar = () => {
             </NavLink>
           </ul>
         </div>
-        <div className="navbar-end space-x-5">
+        <div className="navbar-end space-x-5 hidden lg:flex">
           <a className="bg-[#23BE0A] rounded-lg py-[10px] px-[28px] text-[18px] text-white font-semibold font-work-sans cursor-pointer">
             Sign in
           </a>

@@ -32,30 +32,30 @@ const BookDetails = () => {
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-8 items-center">
-        <div className="bg-[#1313130D] rounded-2xl h-[650px] flex items-center justify-center object-cover p-[70px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="bg-[#1313130D] rounded-2xl h-auto lg:h-[650px] flex items-center justify-center object-cover p-[70px]">
           <img src={image} alt={bookName} className="w-[60%] h-[80%]" />
         </div>
         <div className="">
-          <h4 className="text-[#131313] text-[40px] font-bold font-playfair">
+          <h4 className="text-[#131313] text-[40px] font-bold font-playfair text-center lg:text-start">
             {bookName}
           </h4>
-          <span className="text-[#131313CC] text-xl font-medium font-work-sans">
+          <span className="text-[#131313CC] text-xl font-medium font-work-sans block lg:inline text-center lg:text-start">
             By: {author}
           </span>
-          <div className="border-y border-[#13131326] p-[30px] mt-6">
+          <div className="border-y border-[#13131326] p-[30px] mt-6 text-center lg:text-start">
             <span className="text-xl font-medium font-work-sans">
               {category}
             </span>
           </div>
-          <p className="text-[16px] text-[#131313] font-bold my-6">
+          <p className="text-[16px] text-[#131313] font-bold my-6 mx-2 lg:mx-0">
             Review:{" "}
             <span className="text-[#131313B2] text-[16px] font-normal">
               {review}
             </span>
           </p>
 
-          <div className="space-x-4 mt-6 border-b border-[#13131326] pb-[30px]">
+          <div className="space-x-4 mt-6 border-b border-[#13131326] pb-[30px] text-center lg:text-start">
             <span>Tag</span>
             {tags.map((tag, index) => (
               <span
@@ -66,7 +66,7 @@ const BookDetails = () => {
               </span>
             ))}
           </div>
-          <div className="my-6 space-y-4 w-[60%]">
+          <div className="my-6 space-y-4 w-[60%] mx-auto lg:mx-0">
             <div className="flex flex-row justify-between text-right">
               <span className="text-[#131313B2] text-[16px] font-work-sans">
                 Number Of Pages
@@ -100,7 +100,7 @@ const BookDetails = () => {
               </span>
             </div>
           </div>
-          <div className="space-x-6">
+          <div className="lg:space-x-6 space-y-4 lg:space-y-0 flex flex-col lg:flex-row w-[50%] lg:w-[100%] mx-auto">
             <button
               onClick={() => saveReadBooks(bookId)}
               className="border border-[#1313134D] px-[20px] py-[15px] text-[#131313] text-[18px] font-semibold rounded-lg"

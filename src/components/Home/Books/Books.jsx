@@ -12,8 +12,8 @@ const Books = () => {
 
   return (
     <div className="my-[100px]">
-      <h2 className="text-[#131313] text-[40px] font-playfair font-bold text-center">
-        Books:
+      <h2 className="text-[#131313] text-[40px] mb-[30px] font-playfair font-bold text-center">
+        Books 
       </h2>
 
       {books.length < 1 && (
@@ -26,7 +26,7 @@ const Books = () => {
       )}
 
       <div className="container mx-auto">
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 mx-4 gap-6">
           {books.map((book) => (
             <Book key={book.bookId} book={book}></Book>
           ))}

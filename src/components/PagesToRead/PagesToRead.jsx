@@ -46,6 +46,7 @@ const PagesToRead = () => {
     <div className="container mx-auto mt-[40px]">
       <div className="w-[100%] mx-auto bg-[#13131308] rounded-3xl p-[30px]">
         <BarChart
+        style={{width: '1500px'}}
           width={1500}
           height={400}
           data={readBooks}
